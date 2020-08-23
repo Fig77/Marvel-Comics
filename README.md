@@ -2,12 +2,11 @@
 [![Issues][issues-shield]][issues-url]
 <br />
 <p align="center">
-  <img src="assets/menu.png" alt="Here you can put a header picture" width="718" height="394">
-  <h2 align="center"> Foobar </h2>
+  <h2 align="center"> Marvel Comics </h2>
   <p align="center">
-  	Foo for foobing (Ruby ♦️)
+  	Catalog of Marvel Comics (React-Redux ♦️)
     <br />
-    <a href="https://github.com/Fig77/Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Fig77/Marvel-Comics"><strong>Explore the docs »</strong></a>
     <br />
 </p>
 
@@ -32,16 +31,13 @@ Index
 Clone the project, and install the gems with bundler.
 
 ```bash
-git clone this link
-bundle install
-run this or that
+
 ```
 
 ## Usage
 
 ```bash
-cd foo/
-ruby bar.rb
+
 ```
 
 ## Screenshots
