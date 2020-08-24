@@ -1,0 +1,1 @@
+const FETCH_DATA = () => ({type:'FETCH_DATA'})

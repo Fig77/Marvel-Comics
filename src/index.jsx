@@ -9,8 +9,10 @@ import {comicReducer} from './reducer/comics';
 const store = createStore(comicReducer); // change after filter
 
 ReactDOM.render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
+  <React.StrictMode>
+    <Provider store={store}>
+      <App />
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root'),
 );
