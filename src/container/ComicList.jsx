@@ -1,22 +1,20 @@
-import React,{ useEffect, useState } from 'react';
-import { connect } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Comic from '../component/Comic';
 import apidata from '../API/apidata';
 
-const mapStateToProps = state => state;
-
 const ComicList = props => {
-  const [data, setData] = useState([props.comics]);
+  const dispatch = useDispatch();
+  const data = useSelector(state => state.comics);
   const [loading, setLoading] = useState(false);
-  const init = async () => {
-    if (data.length === 0) {
-      setLoading(true);
-      const comicData = await apidata.fetchData();
-      setData(comicData);
-      setLoading(false);
-    };
-  };
-  init();
+  
+  React.useEffect(() => {
+    const init = ( async() => {
+      const result = await apidata.fetchData();
+      console.log(result);
+    })();
+
+  }, []);
   return (
     <>
       { loading ? <p>Loading! wait a sec...</p> : 
@@ -24,8 +22,6 @@ const ComicList = props => {
       }
     </>
   );
-  
-
 };
 
-export default connect(mapStateToProps)(ComicList);
+export default ComicList;

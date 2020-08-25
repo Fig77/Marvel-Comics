@@ -8,7 +8,7 @@ const comicReducer = (state = INIT_STATE, action) => {
     case 'FETCH_DATA': {
       const result = action.fetch;
     };
-   return state;
+    default: return state;
   }
 }
 export { comicReducer };

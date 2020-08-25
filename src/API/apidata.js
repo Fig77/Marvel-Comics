@@ -4,9 +4,8 @@ const apidata = (() => {
   const fetchData = async () => {
     const endpoint = `https://gateway.marvel.com/v1/public/comics?limit=10&apikey=${KEY_API}`;
     const data = await (await fetch(endpoint)).json();
-    console.log(data);
-    
-    return await data.results;
+
+    return await data;
   };
 
   return {
