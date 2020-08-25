@@ -18,14 +18,24 @@ const ComicList = props => {
     })();
   }, []);
   
-  const comicMap = () => {
-    return (<Comic title = {data[0].title}/> );
+  const comicSet = (i) => {
+    return (<Comic thumbnail={ data[i].thumbnail } title={data[i].title}/> );
   };
   
+  function comicMap() {
+    let answer = [];
+    let i = 0;
+    while (i < data.length) {
+       answer.push(comicSet(i));
+       i += 1;
+    }
+    return answer;
+  }
+
   return (
     <> 
       { loading ? <p>Loading! wait a sec...</p> :
-        data.length === 0 ? <p> No comics to be found! </p> : <Comic title = {data[0].title}/>
+        data.length === 0 ? <p> No comics to be found! </p> : <div>{ comicMap() }</div>
       }
     </>
   );

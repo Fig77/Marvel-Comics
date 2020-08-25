@@ -3,14 +3,14 @@ import React from 'react'
 
 const Comic = (props) => {
  const {
-    title
+    id, title, thumbnail
   } = props;
 
   return (
-   
-   <div>
+
+   <div key = {id}>
       <h1>{ title }</h1>
-      <image alt="no img yet"></image>
+      <img alt="no img yet" src={thumbnail.path.concat("/portrait_xlarge.").concat(thumbnail.extension)}/>
    </div>
   );
   
