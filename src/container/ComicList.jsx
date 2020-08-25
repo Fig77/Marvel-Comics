@@ -9,19 +9,19 @@ const ComicList = props => {
   const data = useSelector(state => state);
   const [loading, setLoading] = useState(false);
 
-  React.useEffect(() => {
-    const init = ( async() => {
-      setLoading(true);
-      const result = await apidata.fetchData();
-      dispatch(UPDATE_DATA(result.data.results)); // is duispatcing but aint updating.
-      setLoading(false);
-    })();
-  }, []);
-  
+  //React.useEffect(() => {
+  //  const init = ( async() => {
+  //    setLoading(true);
+  //    const result = await apidata.fetchData();
+  //    dispatch(UPDATE_DATA(result.data.results)); // is duispatcing but aint updating.
+  //    setLoading(false);
+  //  })();
+  //}, []);
+
   const comicSet = (i) => {
-    return (<Comic thumbnail={ data[i].thumbnail } title={data[i].title}/> );
+    return (<Comic key={data[i].id} thumbnail={ data[i].thumbnail } title={data[i].title}/> );
   };
-  
+
   function comicMap() {
     let answer = [];
     let i = 0;
