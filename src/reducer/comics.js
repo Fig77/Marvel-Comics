@@ -1,12 +1,9 @@
-const INIT_STATE = {
-  comics: [],
-  message: 'No comics to be found',
-};
 
-const comicReducer = (state = INIT_STATE, action) => {
+const comicReducer = (state = [], action) => {
   switch (action.type) {
-    case 'FETCH_DATA': {
-      const result = action.fetch;
+    case 'UPDATE_DATA': {
+      const comic_array = action.comics;
+      return [...state, ...comic_array]
     };
     default: return state;
   }

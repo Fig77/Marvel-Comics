@@ -1,1 +1,3 @@
-const FETCH_DATA = () => ({type:'FETCH_DATA'})
+const UPDATE_DATA = (comics) => ({type:'UPDATE_DATA', comics})
+
+export { UPDATE_DATA }

@@ -3,10 +3,11 @@ import React from 'react'
 
 const Comic = (props) => {
  const {
-    id, title
+    title
   } = props;
 
   return (
+   
    <div>
       <h1>{ title }</h1>
       <image alt="no img yet"></image>
