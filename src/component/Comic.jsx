@@ -1,15 +1,15 @@
 import PropTypes from 'prop-types';
 import React from 'react'
+import { Link, Route } from 'react-router-dom';
 
 const Comic = (props) => {
  const {
-    id, title, thumbnail
+    key, title, thumbnail, id
   } = props;
-
   return (
-   <div key={id}>
-      <h1>{ title }</h1>
-      <img alt="no img yet" src={thumbnail.path.concat("/portrait_xlarge.").concat(thumbnail.extension)}/>
+   <div key={key}>
+      <Link to={`/comic/${id}`}>{ title }</Link>
+      <img alt="no img yet" src={thumbnail.path.concat("/landscape_amazing.").concat(thumbnail.extension)}/>
    </div>
   );
 };
