@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from '../style/Filter.module.css';
+import PropTypes from 'prop-types';
 
 const ComicFilter = (props) => {
   const { filterCategory } = props
@@ -16,6 +17,14 @@ const ComicFilter = (props) => {
     </select>
     </div>
   );
+};
+
+ComicFilter.propTypes = {
+  filterCategory: PropTypes.func.isRequired,
+};
+
+ComicFilter.defaultProps = {
+  filterCategory: (event) => {},
 };
 
 export default ComicFilter;

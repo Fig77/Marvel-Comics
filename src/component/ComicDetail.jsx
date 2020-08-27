@@ -1,7 +1,8 @@
 import React from 'react';
-import {Link, useParams} from 'react-router-dom';
+import {Link } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import styles from '../style/ComicDetail.module.css';
+import PropTypes from 'prop-types';
 
 
 const ComicDetail = (props) => {
@@ -29,5 +30,14 @@ const ComicDetail = (props) => {
   </div>
   );
 };
+
+ComicDetail.propTypes = {
+  key: PropTypes.number.isRequired,
+};
+
+ComicDetail.defaultProps = {
+  key: 0
+};
+
  
 export default ComicDetail;

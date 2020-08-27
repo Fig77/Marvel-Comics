@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react'
-import { Link, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import styles from '../style/Comic.module.css';
 
@@ -21,4 +21,15 @@ const Comic = (props) => {
   }
 };
 
+Comic.propTypes = {
+  item: PropTypes.object.isRequired,
+  id: PropTypes.number.isRequired,
+};
+
+Comic.defaultProps = {
+  item: {"images":[undefined], "title": ""},
+  id: 0
+};
+
 export default Comic;
+

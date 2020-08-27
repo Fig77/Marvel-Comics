@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+// eslint-disable-next-line no-unused-vars
+import React, { useEffect, useState } from 'react'; 
 import { useSelector, useDispatch } from 'react-redux';
 import Comic from '../component/Comic';
 import apidata from '../API/apidata';
@@ -7,15 +8,19 @@ import ComicFilter from '../component/Filter';
 import styles from '../style/ComicList.module.css';
 
 const ComicList = props => {
+
   // HOOK INIT
+
   const dispatch = useDispatch();
   const data = useSelector(state => state.comicReducer);
   const [loading, setLoading] = useState(false);
-  const [render, setRender] = useState('');
+
+
   // ON FIRST RENDER
 
   React.useEffect(() => { 
     if (data.length === 0) {
+      // eslint-disable-next-line no-unused-vars
       const init = ( async() => {
         setLoading(true);
         const result = await apidata.fetchData();
@@ -29,7 +34,7 @@ const ComicList = props => {
         setLoading(false);
       })();
     }
-  }, []);
+  }, [data, dispatch]);
 
   let filter = ''; // dummy variable, I don't really need this hook / state call here.
 
