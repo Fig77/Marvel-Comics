@@ -1,9 +1,20 @@
-import React, from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 
-const filter_heroes = [];
+const ComicFilter = (props) => {
+  const { filterCategory } = props
+  const FORMAT_COMICS = ['all','Comic', 'Hardcover', 'Trade paperbag', 'Digital comic'];
+  
+  const formatOption = (e, index) => {
+    return (<option key={index}>{e}</option>);
+  }
 
-const Filter = () => {
-  <div>
-  </div>
+  return (
+    <div class="arrow select-input">
+    <select className="input-general border-inputs select-input" onChange = {(event)=>filterCategory(event)} name="Category">
+      {FORMAT_COMICS.map((x, index) => formatOption(x, index))}
+    </select>
+    </div>
+  );
 };
+
+export default ComicFilter;

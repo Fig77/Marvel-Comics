@@ -3,7 +3,7 @@ import '../style/App.css';
 import ComicList from '../container/ComicList';
 import ComicDetail from '../component/ComicDetail';
 import Navbar from '../container/Navbar';
-import { BrowserRouter as Router, Route,  Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 function App() {
   return (

@@ -8,4 +8,4 @@ const comicReducer = (state = [], action) => {
     default: return state;
   }
 }
-export { comicReducer };
+export default comicReducer;

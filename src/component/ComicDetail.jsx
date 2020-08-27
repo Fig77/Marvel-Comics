@@ -4,9 +4,8 @@ import {useSelector} from 'react-redux';
 
 
 const ComicDetail = (props) => {
-  const comics = useSelector(store => store);
+  const comics = useSelector(store => store.comicReducer);
   const key = props.match.params.key;
-  console.log(comics);
   return (
   <section>
     <div>
@@ -15,12 +14,12 @@ const ComicDetail = (props) => {
         <p> { comics[key].description} </p>
         <div>
           <span> Issue number: {comics[key].issueNumber} </span>
-          <ul> Characters that appear on this comic:  </ul>
+          <ul> Format: { comics[key].format } </ul>
         </div>
       </div>
     </div>
     <div>
-      <img alt="no img yet" src={comics[key].images[0].path.concat("/portrait_incredible.").concat(comics[key].images[0].extension)}/>
+      <img alt="No image for this comic yet!" src={comics[key].images[0] ? comics[key].images[0].path.concat("/portrait_incredible.").concat(comics[key].images[0].extension) : <p></p>}/>
     </div>
     <Link to="/">Go back</Link>
   </section>
