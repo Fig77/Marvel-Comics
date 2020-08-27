@@ -1,0 +1,24 @@
+.footer {
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #191919;
+  color: #fafafa;
+}
+
+.a:link,.a:visited,.a:active {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.github {
+  height: 100%;
+  width: 100%;
+}
+
+.i {
+   font-size: 30px !important;
+   margin-top: 25px;
+}

@@ -22,7 +22,7 @@ a:visited {
 }
 
 a:active {
-   color: #212121; ;
+  color: #212121;
 }
 
 .border {
@@ -47,6 +47,10 @@ img::before {
 }
 
 .span {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   bottom: 0;
   padding-top: 15px;
@@ -55,4 +59,8 @@ img::before {
   width: 100%;
   max-width: 300px;
   height: 60px;
+}
+
+.span > a {
+  font-size: 18px;
 }
