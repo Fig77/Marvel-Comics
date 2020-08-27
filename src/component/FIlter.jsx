@@ -1,16 +1,17 @@
 import React from 'react';
+import styles from '../style/Filter.module.css';
 
 const ComicFilter = (props) => {
   const { filterCategory } = props
-  const FORMAT_COMICS = ['all','Comic', 'Hardcover', 'Trade paperbag', 'Digital comic'];
+  const FORMAT_COMICS = ['All','Comic', 'Hardcover', 'Magazine', 'Graphic Novel'];
   
   const formatOption = (e, index) => {
     return (<option key={index}>{e}</option>);
   }
 
   return (
-    <div class="arrow select-input">
-    <select className="input-general border-inputs select-input" onChange = {(event)=>filterCategory(event)} name="Category">
+    <div >
+    <select className={styles.filter} onChange = {(event)=>filterCategory(event)} name="Category">
       {FORMAT_COMICS.map((x, index) => formatOption(x, index))}
     </select>
     </div>

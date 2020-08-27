@@ -1,0 +1,15 @@
+.flex {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  background-color: #e53935;
+}
+
+.padding {
+  padding: 100px;
+}
