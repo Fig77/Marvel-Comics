@@ -3,17 +3,19 @@ const apidata = (() => {
 
   const fetchData = async () => {
     const right = `limit=5&offset=3&apikey=${KEY_API}`;
-    const format = ["comic&", "magazine&", "graphic%20novel&", "hardcover&"]
-    const endpoint = `https://gateway.marvel.com/v1/public/comics?format=`
-    let i = 0
+    const format = ['comic&', 'magazine&', 'graphic%20novel&', 'hardcover&'];
+    const endpoint = 'https://gateway.marvel.com/v1/public/comics?format=';
+    let i = 0;
     let answ = [];
     while (i < 4) {
-      let aux = endpoint.concat(format[i]).concat(right);
-      answ = answ.concat(await(await fetch(aux)).json());
+      const aux = endpoint.concat(format[i]).concat(right);
+      /* eslint-disable no-await-in-loop */
+      answ = answ.concat(await (await fetch(aux).then(res => res.json())
+        .catch(error => 'Error:'.concat(error))));
       i += 1;
     }
     const data = answ;
-    return await data;
+    return data;
   };
 
   return {

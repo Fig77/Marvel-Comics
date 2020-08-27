@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link } from 'react-router-dom';
+import {Link, Redirect } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import styles from '../style/ComicDetail.module.css';
 import PropTypes from 'prop-types';
@@ -8,6 +8,10 @@ import PropTypes from 'prop-types';
 const ComicDetail = (props) => {
   const comics = useSelector(store => store.comicReducer);
   const key = props.match.params.key;
+  if (key > comics.length) {
+    return (<Redirect from="/comic/:key" to="/" />);
+    
+  } else {
   return (
   <div className={`${styles.flexcolumn} ${styles.w100}`}>
   <div className ={styles.container}>
@@ -29,6 +33,7 @@ const ComicDetail = (props) => {
   </div>
   </div>
   );
+ }
 };
 
 ComicDetail.propTypes = {
