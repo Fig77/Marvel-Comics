@@ -12,9 +12,9 @@ const Comic = (props) => {
   if (filter.filter === '' || filter.filter === item.format) {
     return (
      <div key={id} className = {`${styles.container} ${styles.border}`}>
-     <img alt="no img yet" src={ item.images[0] !== undefined ?item.images[0].path.concat(".").concat(item.images[0].extension) : <p>woops</p>}/>
-     <span><Link to={`/comic/${id}`}>{ item.title }</Link></span>
-    </div>
+      <img className={styles.img} alt=" " src={ item.images[0] !== undefined ?item.images[0].path.concat(".").concat(item.images[0].extension) : <p>woops</p>}/>
+      <span className={styles.span}><Link to={`/comic/${id}`}>{ item.title }</Link></span>
+     </div>
    );
   } else {
     return null;
