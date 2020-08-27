@@ -12,9 +12,9 @@ const ComicList = props => {
   const data = useSelector(state => state.comicReducer);
   const [loading, setLoading] = useState(false);
   const [render, setRender] = useState('');
-
   // ON FIRST RENDER
-  React.useEffect(() => {
+
+  React.useEffect(() => { 
     if (data.length === 0) {
       const init = ( async() => {
         setLoading(true);

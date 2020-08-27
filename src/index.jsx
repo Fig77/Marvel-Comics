@@ -5,13 +5,15 @@ import App from './component/App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import rootReducer from './reducer/index';
+import { PersistGate } from 'redux-persist/integration/react'
 
-const store = createStore(rootReducer); // change after filter
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
+    <Provider store={rootReducer.store}>
+      <PersistGate loading={null} persistor={rootReducer.persistor} >
+       <App />
+      </PersistGate>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root'),

@@ -1,0 +1,62 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 650px;
+  border-style: solid;
+  border-color: #212121;
+  border-width: thin;
+  background-color: #fafafa;
+  position: relative;
+  margin-top: 25px;
+}
+
+.fix {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.divleft {
+
+}
+
+.divleft > img::before {
+
+}
+
+.divleft > img {
+  width: 100%; 
+}
+
+.p {
+  max-height: 200px;
+  overflow-y: scroll;
+  font-family: 'Heebo', sans-serif;
+  color: #212121;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.p2 {
+  overflow: hidden;
+}
+
+.divright {
+  display: flex;
+  box-sizing:border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  padding: 1em;
+}
+
+.w50 {
+  width: 320px;
+}
