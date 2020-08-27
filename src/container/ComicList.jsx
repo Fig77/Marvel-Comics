@@ -8,24 +8,26 @@ const ComicList = props => {
   const dispatch = useDispatch();
   const data = useSelector(state => state);
   const [loading, setLoading] = useState(false);
+  const [render, setRender] = useState('');
 
   React.useEffect(() => {
-    const init = ( async() => {
-      setLoading(true);
-      console.log('NO')
-      const result = await apidata.fetchData();
-      dispatch(UPDATE_DATA(result.data.results)); // is duispatcing but aint updating.
-      setLoading(false);
-    })();
+    if (data.length === 0) {
+      const init = ( async() => {
+        setLoading(true);
+        const result = await apidata.fetchData();
+        dispatch(UPDATE_DATA(result.data.results));
+        setLoading(false);
+      })();
+    }
   }, []);
 
   const comicSet = (i) => {
-    return (<Comic key={data[i].id} thumbnail={ data[i].thumbnail } title={data[i].title} id={i}/> );
+    return (<Comic key={i} item={data[i]} id={i} /> );
   };
 
   function comicMap() {
     let answer = [];
-    let i = 0;
+    let i = 0
     while (i < data.length) {
        answer[i] = (comicSet(i));
        i += 1;
@@ -33,11 +35,11 @@ const ComicList = props => {
     return answer;
   }
   return (
-    <> 
+    <div key='2s'> 
       { loading ? <p>Loading! wait a sec...</p> :
         data.length === 0 ? <p> No comics to be found! </p> : <div>{ comicMap() }</div>
       }
-    </>
+    </div>
   );
 };
 

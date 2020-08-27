@@ -4,7 +4,7 @@ const comicReducer = (state = [], action) => {
     case 'UPDATE_DATA': {
       const comic_array = action.comics;
       return [...state, ...comic_array]
-    };
+    }
     default: return state;
   }
 }

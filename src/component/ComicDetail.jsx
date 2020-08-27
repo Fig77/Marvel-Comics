@@ -1,42 +1,30 @@
 import React from 'react';
 import {Link, useParams} from 'react-router-dom';
+import {useSelector} from 'react-redux';
+
 
 const ComicDetail = (props) => {
-  
-//  const {
-//    id,
-//    image,
-//    title,
-//    description,
-//    thubmnail,
-//    characters,
-//    issuenumber
-//  } = props.location.comicProps;
-//
-//  return (
-//  <section key={id}>
-//    <div>
-//      <h2>{ title }</h2>
-//      <div>
-//        <p> {description} </p>
-//        <div>
-//          <span> {issuenumber} </span>
-//          <ul> { characters } </ul>
-//        </div>
-//      </div>
-//    </div>
-//    <div>
-//      <img src={thumbnail.path.concat("/portrait_xlarge.")}/>
-//    </div>
-//  </section>
-//  );
-  const { id } = props;
+  const comics = useSelector(store => store);
+  const key = props.match.params.key;
+  console.log(comics);
   return (
-    <div key={id}>
-      <h1>WOWWWWWW BROOO WTF!!!111!!!</h1>
-      <Link to="/"> o go power rangers... na na na na na </Link>
+  <section>
+    <div>
+      <h2>{ comics[key].title }</h2>
+      <div>
+        <p> { comics[key].description} </p>
+        <div>
+          <span> Issue number: {comics[key].issueNumber} </span>
+          <ul> Characters that appear on this comic:  </ul>
+        </div>
+      </div>
     </div>
-  )
+    <div>
+      <img alt="no img yet" src={comics[key].images[0].path.concat("/portrait_incredible.").concat(comics[key].images[0].extension)}/>
+    </div>
+    <Link to="/">Go back</Link>
+  </section>
+  );
 };
 
 export default ComicDetail;

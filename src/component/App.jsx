@@ -10,8 +10,8 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Route exact path="/" render={props => <ComicList {...props}/>}/>
-        <Route exact path="/comic/:key" render={props=> <ComicDetail {...props}/>}/>
+        <Route exact path="/"  component={ComicList} />
+        <Route exact path="/comic/:key" component={ComicDetail}/>
      </div>
   </Router>
   );
