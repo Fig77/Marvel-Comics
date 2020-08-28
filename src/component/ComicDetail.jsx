@@ -44,5 +44,5 @@ ComicDetail.defaultProps = {
   key: 0
 };
 
- 
+
 export default ComicDetail;

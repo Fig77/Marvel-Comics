@@ -32,4 +32,3 @@ Comic.defaultProps = {
 };
 
 export default Comic;
-
