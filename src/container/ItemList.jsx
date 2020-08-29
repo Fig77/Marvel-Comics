@@ -42,7 +42,7 @@ const filterCategory = event => {
 };
   
 const comicSet = (i) => {
-  return (<Comic key={i} item={data[i]} id={i} filterOn={currentFilter}/> );
+  return (<Comic key={i} item={data[i]} id={i} filterOn={currentFilter.filter}/> );
 };
 
 function comicMap() {
