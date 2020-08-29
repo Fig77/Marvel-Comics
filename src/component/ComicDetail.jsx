@@ -6,26 +6,27 @@ import PropTypes from 'prop-types';
 
 
 const ComicDetail = (props) => {
-  const comics = useSelector(store => store.comicReducer);
+  const comics = useSelector(store => store.comicReducer); // safeguard for getting straight to the route
   const key = props.match.params.key;
+  const comic = props.location.state === undefined ? comics[key] : props.location.state.comic; 
+  
   if (key > comics.length) {
-    return (<Redirect from="/comic/:key" to="/" />);
-    
+    return (<Redirect from="/comic/:key" to="/" />); 
   } else {
   return (
   <div className={`${styles.flexcolumn} ${styles.w100}`}>
   <div className ={styles.container}>
-    <h2 className = {styles.title}>{ comics[key].title }</h2>
+    <h2 className = {styles.title}>{ comic.title }</h2>
     <div className = "">
-      <img className={styles.img} alt=" " src={comics[key].images[0] ? comics[key].images[0].path.concat(".").concat(comics[key].images[0].extension) : <p></p>}/>
+      <img className={styles.img} alt=" " src={comic.images[0] ? comic.images[0].path.concat(".").concat(comic.images[0].extension) : <p></p>}/>
     </div>
     <div className = "">
       <div>
-        <p className={`${styles.p} ${styles.prow}`}> { comics[key].description === "" ? "Wow, they didn't even add a description. Rude." : comics[key].description} </p>
+        <p className={`${styles.p} ${styles.prow}`}> { comic.description === "" ? "Wow, they didn't even add a description. Rude." : comic.description} </p>
         <div>
-          <p className={styles.prow}> <strong>Issue number:</strong> {comics[key].issueNumber} </p>
-          <p className={styles.prow}> <strong>Format:</strong> { comics[key].format } </p>
-          <p className={styles.prow}> <strong>{ comics[key].urls.length === 0 ? <a href="http://marvel.com">Visit site</a> : <a href={comics[key].urls[0].url}>Visit site</a> }</strong>  </p>
+          <p className={styles.prow}> <strong>Issue number:</strong> {comic.issueNumber} </p>
+          <p className={styles.prow}> <strong>Format:</strong> { comic.format } </p>
+          <p className={styles.prow}> <strong>{ comic.urls.length === 0 ? <a href="http://marvel.com">Visit site</a> : <a href={comic.urls[0].url}>Visit site</a> }</strong>  </p>
         </div>
       </div>
     </div>
@@ -38,11 +39,18 @@ const ComicDetail = (props) => {
 
 ComicDetail.propTypes = {
   key: PropTypes.number.isRequired,
+  comic: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    issueNumber: PropTypes.number.isRequired,
+    images: PropTypes.array.isRequired,
+    urls: PropTypes.array.isRequired
+  })
 };
 
 ComicDetail.defaultProps = {
-  key: 0
+  key: 0,
+  comic: {title: "not found", images:["not found"], description: "not found", issueNumber: -1, urls: ['google.com']}
 };
-
 
 export default ComicDetail;

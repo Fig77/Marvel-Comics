@@ -12,7 +12,7 @@ const Comic = (props) => {
     return (
      <div key={id} className = {`${styles.container} ${styles.border}`}>
       <img className={styles.img} alt=" " src={ item.images[0] !== undefined ?item.images[0].path.concat(".").concat(item.images[0].extension) : <p>woops</p>}/>
-      <span className={styles.span}><Link data-testid={id} id={id} to={`/comic/${id}`}>{ item.title }</Link></span>
+      <span className={styles.span}><Link data-testid={id} id={id} to={{pathname:`/comic/${id}`, state:{comic: item}}}>{ item.title }</Link></span>
      </div>
    );
   } else {
