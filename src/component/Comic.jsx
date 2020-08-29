@@ -6,10 +6,9 @@ import styles from '../style/Comic.module.css';
 
 const Comic = (props) => {
  const {
-    item, id
+    item, id, filterOn
   } = props;
-  const filter = useSelector(state => state.filterReducer)
-  if (filter.filter === '' || filter.filter === item.format) {
+  if (filterOn === '' || filterOn === item.format) {
     return (
      <div key={id} className = {`${styles.container} ${styles.border}`}>
       <img className={styles.img} alt=" " src={ item.images[0] !== undefined ?item.images[0].path.concat(".").concat(item.images[0].extension) : <p>woops</p>}/>

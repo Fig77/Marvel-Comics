@@ -10,6 +10,7 @@ const ItemList = () => {
 
 const dispatch = useDispatch();
 const data = useSelector(state => state.comicReducer);
+const currentFilter = useSelector(state => state.filterReducer)
 const [loading, setLoading] = useState(false);
 
 React.useEffect(() => {
@@ -41,7 +42,7 @@ const filterCategory = event => {
 };
   
 const comicSet = (i) => {
-  return (<Comic key={i} item={data[i]} id={i} /> );
+  return (<Comic key={i} item={data[i]} id={i} filterOn={currentFilter}/> );
 };
 
 function comicMap() {
