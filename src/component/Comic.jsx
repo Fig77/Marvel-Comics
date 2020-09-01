@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react'
 import { Link } from 'react-router-dom';
-import {useSelector} from 'react-redux';
 import styles from '../style/Comic.module.css';
 
 const Comic = (props) => {
@@ -21,13 +20,21 @@ const Comic = (props) => {
 };
 
 Comic.propTypes = {
-  item: PropTypes.object.isRequired,
+  item: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    issueNumber: PropTypes.number.isRequired,
+    images: PropTypes.array.isRequired,
+    urls: PropTypes.array.isRequired
+  }),
   id: PropTypes.number.isRequired,
+  filterOn: PropTypes.string.isRequired,
 };
 
 Comic.defaultProps = {
   item: {"images":[undefined], "title": ""},
-  id: 0
+  id: 0,
+  filterOn: ''
 };
 
 export default Comic;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link, Redirect } from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import styles from '../style/ComicDetail.module.css';
 import NotFound from './NotFound';
