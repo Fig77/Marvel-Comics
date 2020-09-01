@@ -65,6 +65,19 @@
   padding: 5px;
 }
 
+.goback_two {
+  background-color:#fafafa;
+  border-color:#212121;
+  border-width: 5px;
+  height: 50px;
+  width: 150px;
+  margin-bottom: 25px;
+}
+
+.goback_two > h1 {
+  margin: 0;
+}
+
 .goback > h1 {
   margin: 5px;
   color: #e53935 !important;

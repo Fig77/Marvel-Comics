@@ -8,7 +8,17 @@ import PropTypes from 'prop-types';
 const ComicDetail = (props) => {
   const comics = useSelector(store => store.comicReducer); // safeguard for getting straight to the route
   const key = props.match.params.key;
-  const comic = props.location.state === undefined ? comics[key] : props.location.state.comic; 
+  const comic = props.location.state === undefined ? comics[key] : props.location.state.comic;
+  if (comic === undefined) {
+    return (
+      <div className={styles.flexcolumn}>
+      <h1>Woops, comic not found!</h1>
+        <div className={`${styles.goback}, ${styles.goback_two}`}>
+          <h1><Link className={styles} to="/">Go back</Link></h1>
+        </div>
+      </div>
+    )
+  }
   return (
   <div className={`${styles.flexcolumn} ${styles.w100}`}>
   <div className ={styles.container}>
