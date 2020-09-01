@@ -1,6 +1,6 @@
 import api from '../apidata';
 import '@testing-library/jest-dom';
-import '@testing-library/jest-dom/extend-expect'
+import '@testing-library/jest-dom/extend-expect';
 
 expect.extend({
   async toFetchDataBulk() {
@@ -9,22 +9,19 @@ expect.extend({
     while (i < result.length) {
       if (result[i].status !== 'Ok') {
         return {
-          message: () =>
-            `expected status of 4 elements to be Ok, but got ${result[i].status}`,
+          message: () => `expected status of 4 elements to be Ok, but got ${result[i].status}`,
           pass: false,
         };
       }
       if (result[i].data.results === undefined) {
         return {
-          message: () =>
-            `expected data results not to be undefined`,
+          message: () => 'expected data results not to be undefined',
           pass: false,
         };
-
       }
       i += 1;
     }
-  }
+  },
 });
 
 describe('Call to API will return 200 status and 20 elements that will have a data attribute', () => {
