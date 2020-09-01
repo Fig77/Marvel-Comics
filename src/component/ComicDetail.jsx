@@ -2,6 +2,7 @@ import React from 'react';
 import {Link, Redirect } from 'react-router-dom';
 import {useSelector} from 'react-redux';
 import styles from '../style/ComicDetail.module.css';
+import NotFound from './NotFound';
 import PropTypes from 'prop-types';
 
 
@@ -10,14 +11,7 @@ const ComicDetail = (props) => {
   const key = props.match.params.key;
   const comic = props.location.state === undefined ? comics[key] : props.location.state.comic;
   if (comic === undefined) {
-    return (
-      <div className={styles.flexcolumn}>
-      <h1>Woops, comic not found!</h1>
-        <div className={`${styles.goback}, ${styles.goback_two}`}>
-          <h1><Link className={styles} to="/">Go back</Link></h1>
-        </div>
-      </div>
-    )
+    return (<NotFound />);
   }
   return (
   <div className={`${styles.flexcolumn} ${styles.w100}`}>
