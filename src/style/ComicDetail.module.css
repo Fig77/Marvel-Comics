@@ -29,9 +29,9 @@
 }
 
 .img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .img::before {
@@ -66,8 +66,8 @@
 }
 
 .goback_two {
-  background-color:#fafafa;
-  border-color:#212121;
+  background-color: #fafafa;
+  border-color: #212121;
   border-width: 5px;
   height: 50px;
   width: 150px;
@@ -83,7 +83,9 @@
   color: #e53935 !important;
 }
 
-.a:link,.a:visited,.a:active {
+.a:link,
+.a:visited,
+.a:active {
   color: #e53935;
   text-decoration: none;
   display: block;
