@@ -9,10 +9,6 @@ const ComicDetail = (props) => {
   const comics = useSelector(store => store.comicReducer); // safeguard for getting straight to the route
   const key = props.match.params.key;
   const comic = props.location.state === undefined ? comics[key] : props.location.state.comic; 
-  
-  if (key > comics.length) {
-    return (<Redirect from="/comic/:key" to="/" />); 
-  } else {
   return (
   <div className={`${styles.flexcolumn} ${styles.w100}`}>
   <div className ={styles.container}>
@@ -22,7 +18,7 @@ const ComicDetail = (props) => {
     </div>
     <div className = "">
       <div>
-        <p className={`${styles.p} ${styles.prow}`}> { comic.description === "" ? "Wow, they didn't even add a description. Rude." : comic.description} </p>
+        <p className={`${styles.p} ${styles.prow}`}>{comic.description === "" ? "Wow, they didn't even add a description. Rude." :comic.description}</p>
         <div>
           <p className={styles.prow}> <strong>Issue number:</strong> {comic.issueNumber} </p>
           <p className={styles.prow}> <strong>Format:</strong> { comic.format } </p>
@@ -34,7 +30,6 @@ const ComicDetail = (props) => {
   </div>
   </div>
   );
- }
 };
 
 ComicDetail.propTypes = {

@@ -5,15 +5,13 @@ import {Link, Route, Router, Switch, BrowserRouter} from 'react-router-dom'
 import {createMemoryHistory} from 'history'
 import {createStore} from 'redux'
 import {Provider, connect} from 'react-redux'
+import data from './dataMock';
+
+// mocking data init on ... mock data.
+
 
 const utils = (() => {
-  function render(
-    ui, {
-      route = '/',
-      history = createMemoryHistory({
-        initialEntries: [route]
-      })
-    } = {}, {
+  function render(ui, { route = '/', history = createMemoryHistory({initialEntries: [route]})} = {}, {
       store = rootReducer.store,
       ...renderOptions
     } = {},
@@ -34,6 +32,15 @@ const utils = (() => {
       ...renderOptions
     })
   }
+      
+const mockReducer = (state = [data[0]], acion) => {
+  switch (action.type) {
+    case 'TEST': {
+      return state;
+    }
+    default: return state;
+  }
+}
   
 function browserR(
     ui, {
@@ -64,7 +71,7 @@ function browserR(
   }
 
   return {
-    render, browserR
+    render, browserR, mockReducer
   }
 })();
 

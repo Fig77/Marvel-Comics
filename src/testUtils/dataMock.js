@@ -3,7 +3,7 @@ const data = [
       "id": 58587,
       "title": "The Amazing Spider-Man (2015) #21 (Rivera Variant)",
       "issueNumber": 21,
-      "description": null,
+      "description":"mock description testing",
       "format": "Comic",
       "urls": [
         {
@@ -21,7 +21,7 @@ const data = [
       "id": 40921,
       "title": "Ghost Rider: Official Index to the Marvel Universe GN-TPB (Graphic Novel)",
       "issueNumber": 1,
-      "description": "The complete history of the Spirit of Vengeance from\r\nhis earliest appearances to the present day! This\r\nfact-packed volume chronicles every character, team,\r\nplace and piece of equipment &mdash; and provides vital\r\ninformation about all things Ghost Rider! Collecting\r\nthe Ghost Rider material from WOLVERINE, PUNISHER\r\n& GHOST RIDER: OFFICIAL INDEX TO THE MARVEL\r\nUNIVERSE #1-6.\r\n152 PGS./Rated T+ &#133;$19.99",
+      "description":"The complete history of the Spirit of Vengeance from his earliest appearances to the complete history of the Spirit of Vengeance from his earliest appearances to the present day! This fact-fact-packed volume chronicles every character, team, place and piece of equipmen",
       "format": "Graphic Novel",
       "urls": [
         {
