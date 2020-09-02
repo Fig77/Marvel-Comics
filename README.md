@@ -12,7 +12,7 @@
 
 # Catalog of Comics
 
-Project consist in an React-Redux APP that fetchs data from an API and shows it as a catalog. You can see a preview, see details of the item and filter them by format. Uses client-side routing.
+Project consist in an React-Redux APP that fetchs data from an API and shows it as a catalog. You can see a preview, see details of the item and filter them by format. Uses client-side routing, and saves store data to not fetch multiple times the same content after updating.
 
 Index
 =====
@@ -48,7 +48,11 @@ Index
 * Run `npm install`
 * Run `npm start`
 
+Keep in mind that only 40 items are fetch from the API.
+
 ## Screenshots
+
+<img src="Readme/one.png" alt="Here you can put a header picture" width="768" height="584">
 
 ## Live
 
