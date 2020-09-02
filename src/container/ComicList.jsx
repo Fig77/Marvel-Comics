@@ -1,5 +1,5 @@
 import React from 'react';
-import ComicFilter from '../../component/Filter';
+import ComicFilter from '../component/Filter';
 import styles from '../style/ComicList.module.css';
 
 const ComicList = props => {
