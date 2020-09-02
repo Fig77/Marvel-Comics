@@ -22,8 +22,8 @@ const Comic = (props) => {
 Comic.propTypes = {
   item: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    issueNumber: PropTypes.number.isRequired,
+    description: PropTypes.string,
+    issueNumber: PropTypes.number,
     images: PropTypes.array.isRequired,
     urls: PropTypes.array.isRequired
   }),

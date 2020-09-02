@@ -10,35 +10,43 @@
     <br />
 </p>
 
-# Foobar
-<!--THIS SHOULD BE ABOUT BRO, SMALL ABOUT HERE-->
-Foobar is a Ruby project that will do wonders with foo. Like foo this, or foo that. But never those.
+# Catalog of Comics
+
+Project consist in an React-Redux APP that fetchs data from an API and shows it as a catalog. You can see a preview, see details of the item and filter them by format. Uses client-side routing.
 
 Index
 =====
-   * [Built with]
-   * [Installation](#installation)
-   * [Prequisites]
+   * [Built with](#built-width)
+   * [Prequisites](#prequisites)
    * [Usage](#usage)
       - [Screenshots](#screenshots)
       - [Live](#live)
    * [Testing](#testing)
-   * [Credits](#credits)
    * [Contributing](#contributing)
+   * [Contact](#credits)
 
-## Installation
+### Built With
 
-Clone the project, and install the gems with bundler.
+* React
+* React-DOM
+* React-Create-App
+* Redux
+* testing-library/react - Jest
+* npm
+* CSS
+* ES6
 
-```bash
+### Prequisites
 
-```
+- Node
+- NPM
+- React/Redux
 
 ## Usage
 
-```bash
-
-```
+* Clone the repo with `git clone https://github.com/Fig77/Marvel-Comics.git`, or download as a ZIP.
+* Run `npm install`
+* Run `npm start`
 
 ## Screenshots
 
@@ -46,12 +54,19 @@ Clone the project, and install the gems with bundler.
 
 ## Testing
 
-## Credits
+- Run `npm test`to run the test suites.
 
 ## Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+## Contact
+
+Facundo Iglesias - [Github profile](https://github.com/Fig77)
+
+Project Link: [Project repo](https://github.com/Fig77/calculator-react/)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
@@ -59,8 +74,7 @@ Please make sure to update tests as appropriate.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/badge/Contributors-1-brightgreen
-[contributors-url]: https://github.com/Fig77/Gradients-Project/graphs/contributors
+[contributors-url]: https://github.com/Fig77/Marvel-Comics/graphs/contributors
 [issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
-[issues-url]: https://github.com/Fig77/Template/issues
+[issues-url]: https://github.com/Fig77/Marvel-Comics/issues
 [product-screenshot]: assets/menu.png
-
