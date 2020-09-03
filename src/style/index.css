@@ -8,6 +8,7 @@ body {
     'Roboto',
     'Oxygen',
     'Ubuntu',
+     'Syne',
     'Cantarell',
     'Fira Sans',
     'Droid Sans',
@@ -15,7 +16,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #e53935;
 }
 
 code {

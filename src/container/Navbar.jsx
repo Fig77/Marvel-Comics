@@ -4,7 +4,7 @@ import styles from '../style/Navbar.module.css'
 const Navbar = () => {
   return(
     <nav className ={`${styles.size} ${styles.dark} ${styles.margin}`}>
-      <img alt="" src= { require('../assets/marvel-logo-1.png') } width='170px' height='95.6px'/>
+      <img alt="" className={styles.logo} src= { require('../assets/marvel-logo-1.png') } />
     </nav>
   )
 };

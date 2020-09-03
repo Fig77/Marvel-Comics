@@ -4,14 +4,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #191919;
-  color: #fafafa;
+  background-color: #fafafa;
+  color: #212121;
 }
 
 .a:link,
 .a:visited,
 .a:active {
-  color: #fafafa;
+  color: #212121;
   text-decoration: none;
 }
 
