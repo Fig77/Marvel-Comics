@@ -54,7 +54,13 @@ Keep in mind that only 40 items are fetch from the API.
 
 <img src="Readme/one.png" alt="Here you can put a header picture" width="768" height="584">
 
+--
+
+<img src="Readme/two.png" alt="Here you can put a header picture" width="768" height="524">
+
 ## Live
+
+[Demo](https://redux-comicapi.netlify.app/)
 
 ## Testing
 
