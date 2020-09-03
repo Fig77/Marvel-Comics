@@ -39,7 +39,7 @@ const data = [
         extension: 'jpg',
       },
     ],
-    prices: []
+    prices: [],
   },
 ];
 
