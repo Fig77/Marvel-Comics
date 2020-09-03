@@ -60,7 +60,7 @@ ComicDetail.propTypes = {
 
 ComicDetail.defaultProps = {
   key: 0,
-  comic: {title: "not found", images:["not found"], description: "not found", issueNumber: -1, urls: ['google.com'], prices: []}
+  comic: {title: "not found", images:["not found"], description: "not found", issueNumber: -1, urls: ['google.com'], prices:[]}
 };
 
 export default ComicDetail;
