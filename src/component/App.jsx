@@ -5,6 +5,7 @@ import ComicDetail from '../component/ComicDetail';
 import Navbar from '../container/Navbar';
 import { BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Footer from '../component/Footer';
+import ScrollTop from './ScrollTop';
 import NotFound from './NotFound';
 
 function App() {
@@ -12,11 +13,13 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Switch>
-          <Route exact path="/"  component={ItemList} />
-          <Route exact path="/comic/:key" component={ComicDetail}/>
-          <Route component={NotFound} />
-        </Switch>
+        <ScrollTop>
+          <Switch>
+            <Route exact path="/"  component={ItemList} />
+            <Route exact path="/comic/:key" component={ComicDetail}/>
+            <Route component={NotFound} />
+          </Switch>
+        </ScrollTop>
         <Footer />
      </div>
   </Router>
