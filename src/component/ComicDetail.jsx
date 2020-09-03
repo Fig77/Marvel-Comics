@@ -5,7 +5,6 @@ import styles from '../style/ComicDetail.module.css';
 import NotFound from './NotFound';
 import PropTypes from 'prop-types';
 
-
 const ComicDetail = (props) => {
   const comics = useSelector(store => store.comicReducer); // safeguard for getting straight to the route
   const key = props.match.params.key;
@@ -18,7 +17,7 @@ const ComicDetail = (props) => {
   <div className ={styles.container}>
     <h2 className = {styles.title}>{ comic.title }</h2>
     <div className = "">
-      <img className={styles.img} alt=" " src={comic.images[0] ? comic.images[0].path.concat(".").concat(comic.images[0].extension) : <p></p>}/>
+      <img className={styles.img} alt=" " src={comic.images[0] ? comic.images[0].path.replace(/^http+s?:\/\//i, 'https://').concat(".").concat(comic.images[0].extension) : <p></p>}/>
     </div>
     <div className = "">
       <div>
