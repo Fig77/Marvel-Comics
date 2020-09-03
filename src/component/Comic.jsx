@@ -10,7 +10,7 @@ const Comic = (props) => {
   if (filterOn === '' || filterOn === item.format) {
     return (
      <div key={id} className = {`${styles.container} ${styles.border}`}>
-      <img className={styles.img} alt=" " src={ item.images[0] !== undefined ?item.images[0].path.replace(/^http+s?:\/\//i, 'https://').concat(".").concat(item.images[0].extension) : <p>woops</p>}/>
+      <img className={styles.img} alt=" " src={ item.images.length ? item.images[0].path.replace(/^http+s?:\/\//i, 'https://').concat(".").concat(item.images[0].extension) : ''}/>
       <span className={styles.span}><Link data-testid={id} id={id} to={{pathname:`/comic/${id}`, state:{comic: item}}}>{ item.title }</Link></span>
      </div>
    );

@@ -17,7 +17,7 @@ const ComicDetail = (props) => {
   <div className ={styles.container}>
     <h2 className = {styles.title}>{ comic.title }</h2>
     <div className = "">
-      <img className={styles.img} alt=" " src={comic.images[0] ? comic.images[0].path.replace(/^http+s?:\/\//i, 'https://').concat(".").concat(comic.images[0].extension) : <p></p>}/>
+      <img className={styles.img} alt=" " src={comic.images.length ? comic.images[0].path.replace(/^http+s?:\/\//i, 'https://').concat(".").concat(comic.images[0].extension) : ''}/>
     </div>
     <div className = "">
       <div>
