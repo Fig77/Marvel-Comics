@@ -3,7 +3,7 @@ const apidata = (() => {
 
   const fetchData = async () => {
     const right = `limit=10&offset=3&apikey=${KEY_API}`;
-    const format = ['comic&', 'magazine&', 'graphic%20novel&', 'hardcover&'];
+    const format = ['hardcover&', 'comic&', 'magazine&', 'graphic%20novel&'];
     const endpoint = 'https://gateway.marvel.com/v1/public/comics?format=';
     let i = 0;
     let answ = [];
