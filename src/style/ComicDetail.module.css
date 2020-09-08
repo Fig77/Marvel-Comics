@@ -38,9 +38,14 @@
 }
 
 .img {
-  height: 600px;
-  min-width: 300px;
-  width: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 450px;
+  background-image: url('../assets/deadpool.png');
+  background-position: center;
+  background-size: cover;
 }
 
 .p {
