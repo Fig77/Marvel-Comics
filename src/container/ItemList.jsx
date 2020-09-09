@@ -13,6 +13,7 @@ const data = useSelector(state => state.comicReducer);
 const currentFilter = useSelector(state => state.filterReducer)
 const [loading, setLoading] = useState(false);
 
+// Hooks approach for this particular case, for the regular componentDidMount
 React.useEffect(() => {
   if (data.length === 0) {
     // eslint-disable-next-line no-unused-vars
