@@ -26,6 +26,7 @@ expect.extend({
 
 describe('Call to API will return 200 status and 20 elements that will have a data attribute', () => {
   test('api to api const url should be able to GET', async () => {
+    jest.setTimeout(30000);
     const result = await api.fetchData();
     await expect(result).toFetchDataBulk();
   });
