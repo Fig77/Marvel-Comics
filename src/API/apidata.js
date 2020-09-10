@@ -11,7 +11,7 @@ const apidata = (() => {
       const aux = endpoint.concat(format[i]).concat(right);
       /* eslint-disable no-await-in-loop */
       answ = answ.concat(await (await fetch(aux).then(res => res.json())
-        .catch(error => 'Error:'.concat(error))));   
+        .catch(error => 'Error:'.concat(error))));
       i += 1;
     }
     const data = answ;
