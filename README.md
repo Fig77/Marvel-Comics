@@ -47,6 +47,7 @@ Index
 * Clone the repo with `git clone https://github.com/Fig77/Marvel-Comics.git`, or download as a ZIP.
 * Run `npm install`
 * Run `npm start`
+* App will run in your browser, go to localhost or 127.0.0*
 
 Keep in mind that only 40 items are fetch from the API.
 
