@@ -1,0 +1,13 @@
+.size {
+  width: 100vw;
+}
+
+.dark {
+  background-color: #fafafa;
+}
+
+.logo {
+  margin: 15px;
+  max-height: 70.6px;
+  width: auto;
+}

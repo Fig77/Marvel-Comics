@@ -1,68 +1,91 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![Contributors][contributors-shield]][contributors-url]
+[![Issues][issues-shield]][issues-url]
+<br />
+<p align="center">
+  <h2 align="center"> Marvel Comics </h2>
+  <p align="center">
+  	Catalog of Marvel Comics (React-Redux ♦️)
+    <br />
+    <a href="https://github.com/Fig77/Marvel-Comics"><strong>Explore the docs »</strong></a>
+    <br />
+</p>
 
-## Available Scripts
+# Catalog of Comics
 
-In the project directory, you can run:
+Project consist in an React-Redux APP that fetchs data from an API and shows it as a catalog. You can see a preview, see details of the item and filter them by format. Uses client-side routing, and saves store data to not fetch multiple times the same content after updating.
 
-### `yarn start`
+Index
+=====
+   * [Built with](#built-width)
+   * [Prequisites](#prequisites)
+   * [Usage](#usage)
+      - [Screenshots](#screenshots)
+      - [Live](#live)
+   * [Testing](#testing)
+   * [Contributing](#contributing)
+   * [Contact](#credits)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Built With
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+* React
+* React-DOM
+* React-Create-App
+* Redux
+* testing-library/react - Jest
+* npm
+* CSS
+* ES6
 
-### `yarn test`
+### Prequisites
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node
+- NPM
+- React/Redux
 
-### `yarn build`
+## Usage
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Clone the repo with `git clone https://github.com/Fig77/Marvel-Comics.git`, or download as a ZIP.
+* Run `npm install`
+* Run `npm start`
+* App will run in your browser, go to localhost or 127.0.0*
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Keep in mind that only 40 items are fetch from the API.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Screenshots
 
-### `yarn eject`
+<img src="Readme/one.png" alt="Here you can put a header picture" width="768" height="584">
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+--
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="Readme/two.png" alt="Here you can put a header picture" width="768" height="524">
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Live
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Demo](https://redux-comicapi.netlify.app/)
 
-## Learn More
+## Testing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Run `npm test`to run the test suites.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Please make sure to update tests as appropriate.
 
-### Analyzing the Bundle Size
+## Contact
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+Facundo Iglesias - [Github profile](https://github.com/Fig77)
 
-### Making a Progressive Web App
+Project Link: [Project repo](https://github.com/Fig77/calculator-react/)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/badge/Contributors-1-brightgreen
+[contributors-url]: https://github.com/Fig77/Marvel-Comics/graphs/contributors
+[issues-shield]: https://img.shields.io/badge/issues-0-%2300ff00
+[issues-url]: https://github.com/Fig77/Marvel-Comics/issues
+[product-screenshot]: assets/menu.png

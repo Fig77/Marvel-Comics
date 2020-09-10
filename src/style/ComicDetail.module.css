@@ -1,0 +1,127 @@
+.mainContainer {
+  background-color: rgba(33, 33, 33, 0.8);
+  width: 100vw;
+  min-height: 800px;
+  line-height: 20.3px;
+  background-image: url('../assets/tryLoop.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0.8;
+  line-height: 24.5px;
+}
+
+.title {
+  width: 100vw;
+  text-align: center;
+  height: max-content;
+  color: #fafafa;
+  font-family: 'Syne', sans-serif;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.justifycenter {
+  justify-content: center;
+}
+
+.aligncenter {
+  align-items: center;
+}
+
+.alignstart {
+  align-items: flex-start;
+}
+
+.img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 450px;
+  background-image: url('../assets/deadpool.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.p {
+  font-size: 1.2em;
+  margin: 2px;
+  letter-spacing: 1.2px;
+  text-align: start;
+}
+
+.imgContainer {
+  width: 500px;
+}
+
+.prow > span {
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.prow {
+  font-size: 1.3em;
+  margin: 10px;
+  margin-left: 0;
+}
+
+.a:link {
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.a:visited {
+  color: #fafafa;
+}
+
+.a:active {
+  color: #fafafa;
+}
+
+.flexcol {
+  display: flex;
+  flex-direction: column;
+}
+
+.table > p {
+  padding: 10px;
+  border-style: solid hidden solid hidden;
+  border-width: thin;
+  border-color: #fafafa;
+}
+
+.content {
+  flex-direction: column;
+  color: #fafafa;
+  padding: 2.5rem;
+}
+
+table {
+  border-style: solid;
+  border-width: thin;
+  border-color: #fafafa;
+}
+
+.containerlinks {
+  width: 90%;
+  background-color: rgba(33, 33, 33, 0.1);
+  padding: 0.3em;
+  color: #212121;
+  margin: 14px 0 14px 0;
+  font-family: 'Syne', sans-serif;
+}
+
+.containerlinks > a:link {
+  color: #fafafa;
+}
+
+.edge {
+  border-style: solid;
+  border-width: thin;
+  padding: 10px;
+}

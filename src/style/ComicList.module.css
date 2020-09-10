@@ -1,0 +1,36 @@
+.flex {
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.red {
+  background-color: #e53935;
+  background-image: url('../assets/bg2.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  background-color: rgba(229, 57, 53, 0.2);
+  height: 100%;
+}
+
+.padding {
+  padding: 100px;
+}
+
+.error {
+  font-family: 'Syne', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
+  background: white;
+  text-align: center;
+}
