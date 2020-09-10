@@ -12,17 +12,21 @@ const dispatch = useDispatch();
 const data = useSelector(state => state.comicReducer);
 const currentFilter = useSelector(state => state.filterReducer)
 const [loading, setLoading] = useState(false);
-
+const [err, setError] = useState('null')
 // Hooks approach for this particular case, for the regular componentDidMount
 React.useEffect(() => {
-  if (data.length === 0) {
+  if (data.length === 0 && err === 'null') {
+    setLoading(true);
     // eslint-disable-next-line no-unused-vars
     const init = (async () => {
-      setLoading(true);
       const result = await apidata.fetchData();
       let i = 0;
       let aux = [];
       while (i < 4) {
+        if (result[i].data === undefined) {
+          setError("Error ".concat(result[i].code));
+          break;
+        }
         aux = aux.concat(result[i].data.results)
         i += 1;
       }
@@ -30,7 +34,7 @@ React.useEffect(() => {
       setLoading(false);
     })();
   }
-}, [data, dispatch]);
+}, [data, dispatch, err]);
 
 let filter = ''; // dummy variable, I don't really need this hook / state call here.
 
@@ -55,7 +59,7 @@ function comicMap() {
   }
   return answer;
 }
-  return (<ComicList filter = {filterCategory} loading={loading} dataSet={data.length === 0 ? true : false} comicMap = {comicMap}/>);
+  return (<ComicList err = {err} filter = {filterCategory} loading={loading} dataSafe={err !== 'null' ? true : false} comicMap = {comicMap}/>);
 }
 
 export default ItemList;
