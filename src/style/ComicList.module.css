@@ -25,3 +25,12 @@
 .padding {
   padding: 100px;
 }
+
+.error {
+  font-family: 'Syne', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: red;
+  background: white;
+  text-align: center;
+}
